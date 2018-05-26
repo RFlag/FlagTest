@@ -34,7 +34,7 @@ var Conf = map[string][]Rule{
 			},
 			Method: "POST",
 			Url:    "/api/wallet/me",
-			Result: ``,
+			Result: `{"code":11,"error":"验证token失败","privateError":"token 已过期"}`,
 		},
 		{
 			Header: http.Header{
@@ -53,9 +53,7 @@ var Conf = map[string][]Rule{
 		{
 			Header: http.Header{
 				"TOKEN": []string{
-					"JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9." +
-						"eyJleHAiOjE1MjUzNTIyMTQsInN1YiI6IiIsInVzZXJJZCI6MTE4MjksImFwcCI6IjEiLCJwbGEiOiJzaG9wIiwidmVyIjoiMSJ9." +
-						"HC7pkiGgPQ_1PcbX1NnYnz9dOLgNVkLKo8lou6tLkcY=",
+					"JWT 2d782b8440adadf1801331572c7d8935",
 				},
 			},
 			Method: "POST",
